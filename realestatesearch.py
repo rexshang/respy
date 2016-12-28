@@ -53,6 +53,10 @@ class MyHTMLParser(HTMLParser):
     def output(self):
         print self.addrs
 
+    def handle_startendtag(self, tag, attrs):
+        print "Start end tag:", tag
+        for attr in attrs:
+            print "     attr:", attr
 
 
 link = 'http://www.zillow.com/homes/for_sale/Los-Altos-CA-94022/97513_rid/globalrelevanceex_sort/37.406642,-122.050467,37.293106,-122.235003_rect/12_zm/'
